@@ -9,7 +9,7 @@ import time
 
 baseurl2 = "https://www.sous-traiter.com/annuaire/liste.php?&page="
 number_loop2 = 93 #number of pages in the adress book
-beginning2 = "societe-" #beginning of the URs
+beginning2 = "societe-" #beginning of the URLs
 end2 = ".html" #end of the URLs
 timing2 = 1 #number of seconds between each URL call, headscrap
 timing3 = 1 #number of seconds between each URL call, individual scrap
