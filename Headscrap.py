@@ -23,7 +23,10 @@ timing2 = 1
 
 # Take all html from a website
 def takeallhtml(website):
-    web = request.urlopen(website)
+    web = try:
+        request.urlopen(website)
+        else:
+            'www.google.com'
     html = web.read().decode('latin-1')
     return html
 
