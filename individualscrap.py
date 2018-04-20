@@ -4,16 +4,6 @@ import urllib.request as request
 import re
 import time
 
-#There are two sources of information
-
-# The main page, annuaire, https://www.sous-traiter.com/annuaire/liste.php
-# goes from page 1 (https://www.sous-traiter.com/annuaire/liste.php?&page=2)
-# to page 95 (https://www.sous-traiter.com/annuaire/liste.php?&page=95
-# It contains all the links to the pages that we are going to actually scrap
-# So first objective is to put all the links into a big array
-# This file is for the first objective
-# The file for the individual scrap is individualscrap.py
-
 # Take all html from a website
 # We had to handle exceptions
 def takeallhtml(website):
