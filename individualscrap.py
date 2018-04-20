@@ -18,7 +18,10 @@ import time
 # We had to handle exceptions
 def takeallhtml(website):
     try :
-        web = request.urlopen(website)
+        try:
+            web = request.urlopen(website)
+        except urllib.error.HTTPError:
+            web = request.urlopen('www.google.com')
         html = web.read().decode('latin-1')
     except urllib.error.HTTPError:
         html = []

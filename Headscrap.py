@@ -23,11 +23,15 @@ timing2 = 1
 
 # Take all html from a website
 def takeallhtml(website):
-    web = try:
-        request.urlopen(website)
-        else:
-            'www.google.com'
-    html = web.read().decode('latin-1')
+    try :
+        try:
+            web = request.urlopen(website)
+        except urllib.error.HTTPError:
+            web = request.urlopen('www.google.com')
+        html = web.read().decode('latin-1')
+    except urllib.error.HTTPError:
+        html = []
+        print("error in opening"+website)
     return html
 
 # Find the first link with a beginning and an end
