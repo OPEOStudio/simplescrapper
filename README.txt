@@ -1,6 +1,6 @@
 Hi everyone !
 
-Here is a very very simple scrapper that scrap an awesome website,
+Here is a very very simple scrapper that scraps an awesome website,
 sous-traiter.com
 
 Given its robots.txt, it is OK to scrap it for contact infos but not
